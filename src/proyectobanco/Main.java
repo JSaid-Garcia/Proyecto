@@ -64,6 +64,16 @@ public class Main {
         for(int i = 0; i < 5; i++) {
             cajasNormales.add(new ArrayList<>());
         }
+        
+       // Asignamos tickets a las cajas
+        for(String ticket : ticketsGenerados) {
+            if(ticket.charAt(0) == 'E') {
+                plataformaServicios.add(ticket);
+            } else {
+                int cajaAsignada = generador.nextInt(5);
+                cajasNormales.get(cajaAsignada).add(ticket);
+            }
+        }
 
     }
 }
