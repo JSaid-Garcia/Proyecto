@@ -60,6 +60,10 @@ public class Main {
         List<String> plataformaServicios = new ArrayList<>();
         List<List<String>> cajasNormales = new ArrayList<>();
        
-        
+        // Creamos las 5 cajas normales
+        for(int i = 0; i < 5; i++) {
+            cajasNormales.add(new ArrayList<>());
+        }
+
     }
 }
