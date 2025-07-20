@@ -74,6 +74,16 @@ public class Main {
                 cajasNormales.get(cajaAsignada).add(ticket);
             }
         }
-
+        // Proceso de atención por caja
+        int[] atendidosPorCaja = new int[5];
+        int[] tiempoPorCaja = new int[5];
+        
+        
+        
+        
+        
+        
+        
+        
     }
 }
