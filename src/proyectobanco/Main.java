@@ -23,6 +23,17 @@ public class Main {
         Random generador = new Random();
         List<String> ticketsGenerados = new ArrayList<>();  
         
+        // Tipos de clientes y sus códigos
+        String[] tipos = {
+            "Adulto mayor (A)",
+            "Mujer embarazada o con niño en brazos (B)",
+            "Persona con discapacidad (C)",
+            "Varios asuntos (D)",
+            "Plataforma de servicios (E)",
+            "Mujer (F)",
+            "Hombre (G)"
+        };
+        char[] codigos = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};   
     }
     
 }
