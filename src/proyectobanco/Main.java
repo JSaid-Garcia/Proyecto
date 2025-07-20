@@ -18,6 +18,11 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        // Inicialización de variables
+        int numTicket = 1;
+        Random generador = new Random();
+        List<String> ticketsGenerados = new ArrayList<>();  
+        
     }
     
 }
