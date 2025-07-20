@@ -99,7 +99,31 @@ public class Main {
         String reporte = "REPORTE DE ATENCIÓN\n\n";
         reporte += "Total tickets emitidos: " + ticketsGenerados.size() + "\n\n";
 
-      
+        // Detalle por caja normal
+        int totalAtendidos = 0;
+        for(int i = 0; i < 5; i++) {
+            reporte += "Caja " + (i+1) + " atendió: " + atendidosPorCaja[i] + " tickets\n";
+            
+            if(atendidosPorCaja[i] > 0) {
+                double promedio = tiempoPorCaja[i] / (double) atendidosPorCaja[i];
+                reporte += "Tiempo promedio: " + String.format("%.1f", promedio) + " minutos\n\n";
+            } else {
+                reporte += "Tiempo promedio: 0 minutos\n\n";
+            }
+            
+            totalAtendidos += atendidosPorCaja[i];
+        }
+
+        // Detalle por caja de plataforma de servicios
+        reporte += "Plataforma de servicios atendió: " + atendidosPlataforma + " tickets\n";
+        if(atendidosPlataforma > 0) {
+            double promedioPlataforma = tiempoPlataforma / (double) atendidosPlataforma;
+            reporte += "Tiempo promedio: " + String.format("%.1f", promedioPlataforma) + " minutos\n\n";
+        } else {
+            reporte += "Tiempo promedio: 0 minutos\n\n";
+        }
+        totalAtendidos += atendidosPlataforma;
+
         
     }
 }
