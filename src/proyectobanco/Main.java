@@ -47,6 +47,19 @@ public class Main {
                 JOptionPane.showMessageDialog(null, "Sistema cerrado. ¡Gracias!");
                 continue;
             }
-        }
+            int indiceAleatorio = generador.nextInt(tipos.length);
+            String ticket = codigos[indiceAleatorio] + "" + numTicket;
+            ticketsGenerados.add(ticket);
+            
+            JOptionPane.showMessageDialog(null, 
+                "Ticket: " + ticket + "\nTipo: " + tipos[indiceAleatorio]);
+            numTicket++;   
+        }  
+        
+        // Distribución a cajas
+        List<String> plataformaServicios = new ArrayList<>();
+        List<List<String>> cajasNormales = new ArrayList<>();
+       
+        
     }
 }
