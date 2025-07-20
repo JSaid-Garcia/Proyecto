@@ -78,7 +78,15 @@ public class Main {
         int[] atendidosPorCaja = new int[5];
         int[] tiempoPorCaja = new int[5];
         
-        
+       // Atendidos en cajas normales
+        for(int i = 0; i < 5; i++) {
+            for(String ticket : cajasNormales.get(i)) {
+                int minutos = 10 + generador.nextInt(111); // 10-120 minutos
+                atendidosPorCaja[i]++;
+                tiempoPorCaja[i] += minutos;
+            }
+        }
+
         
         
         
