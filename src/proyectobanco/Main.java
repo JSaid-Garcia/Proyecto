@@ -34,6 +34,19 @@ public class Main {
             "Hombre (G)"
         };
         char[] codigos = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};   
+        
+        // Generación de tickets
+        boolean continuar = true;
+        while(continuar) {
+            int respuesta = JOptionPane.showConfirmDialog(null, 
+                "¿Desea tomar un ticket?", "Sistema de Tickets", 
+                JOptionPane.YES_NO_OPTION);
+            
+            if(respuesta != JOptionPane.YES_OPTION) {
+                continuar = false;
+                JOptionPane.showMessageDialog(null, "Sistema cerrado. ¡Gracias!");
+                continue;
+            }
+        }
     }
-    
 }
