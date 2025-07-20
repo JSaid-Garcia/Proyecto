@@ -86,12 +86,20 @@ public class Main {
                 tiempoPorCaja[i] += minutos;
             }
         }
+        // Atendidos en plataforma
+        int atendidosPlataforma = 0;
+        int tiempoPlataforma = 0;
+        for(String ticket : plataformaServicios) {
+            int minutos = 10 + generador.nextInt(111);
+            atendidosPlataforma++;
+            tiempoPlataforma += minutos;
+        }
 
-        
-        
-        
-        
-        
+        // Generación del reporte
+        String reporte = "REPORTE DE ATENCIÓN\n\n";
+        reporte += "Total tickets emitidos: " + ticketsGenerados.size() + "\n\n";
+
+      
         
     }
 }
